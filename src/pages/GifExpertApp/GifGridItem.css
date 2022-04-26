@@ -1,0 +1,24 @@
+@keyframes skeleton-animation {
+  0% {transform: translateX(-100%);}
+  50% {transform: translateX(200%);}
+  100% {transform: translateX(-100%);}
+}
+
+.skeleton-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+.skeleton {
+  background-color: #e6e6e6;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.skeleton:before {
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(255,255,255,1) 49%, rgba(230,230,230,1) 100%);
+  animation: skeleton-animation 1.25s ease-in-out infinite;
+}

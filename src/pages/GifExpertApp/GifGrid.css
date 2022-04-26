@@ -1,0 +1,18 @@
+@keyframes card-fade-in-down {
+  0%   {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.fade-in-down {
+  animation: card-fade-in-down .60s ease-in-out;
+}
+
+.card-header-content > h5{
+  color: rgb(110, 110, 110);
+}
